@@ -1,5 +1,5 @@
 { lib, config, ... }: {
-  imports = [ ./cmp.nix ./copilot.nix ./lspkind.nix ];
+  imports = [ ./cmp.nix ./lspkind.nix ];
 
   options = {
     completion.enable = lib.mkEnableOption "Enable completion module";

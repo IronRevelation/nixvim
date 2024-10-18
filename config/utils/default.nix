@@ -5,7 +5,6 @@
     ./harpoon.nix
     ./markdown-preview.nix
     ./mini.nix
-    ./neocord.nix
     ./neotest.nix
     ./nvim-autopairs.nix
     ./nvim-colorizer.nix
@@ -30,7 +29,6 @@
     harpoon.enable = lib.mkDefault true;
     markdown-preview.enable = lib.mkDefault false;
     mini.enable = lib.mkDefault true;
-    neocord.enable = lib.mkDefault true;
     neotest.enable = lib.mkDefault true;
     nvim-autopairs.enable = lib.mkDefault true;
     nvim-colorizer.enable = lib.mkDefault true;
