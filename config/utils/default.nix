@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  ...
-}:
-{
+{ lib, config, ... }: {
   imports = [
     ./better-escape.nix
     ./cloak.nix
@@ -25,14 +20,10 @@
     ./todo-comments.nix
     ./ultimate-autopair.nix
     ./undotree.nix
-    ./wakatime.nix
     ./which-key.nix
-    ./wilder.nix
   ];
 
-  options = {
-    utils.enable = lib.mkEnableOption "Enable utils module";
-  };
+  options = { utils.enable = lib.mkEnableOption "Enable utils module"; };
   config = lib.mkIf config.utils.enable {
     better-escape.enable = lib.mkDefault true;
     cloak.enable = lib.mkDefault true;
@@ -54,8 +45,6 @@
     todo-comments.enable = lib.mkDefault true;
     ultimate-autopair.enable = lib.mkDefault true;
     undotree.enable = lib.mkDefault true;
-    wakatime.enable = lib.mkDefault true;
     which-key.enable = lib.mkDefault true;
-    wilder.enable = lib.mkDefault false;
   };
 }
